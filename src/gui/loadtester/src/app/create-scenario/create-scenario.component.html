@@ -1,1 +1,46 @@
-<p>create-scenario works!</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <mat-form-field appearance="standard">
+        <mat-label>Task force</mat-label>
+        <mat-select formControlName="taskforce">
+            <mat-option value="T1">T1</mat-option>
+            <mat-option value="T2">T2</mat-option>
+            <mat-option value="T3">T3</mat-option>
+        </mat-select>
+        <mat-icon matPrefix>group</mat-icon>
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Transmission rate</mat-label>
+        <input matInput formControlName="bps">
+        <mat-icon matPrefix>signal_wifi_4_bar</mat-icon>
+        <mat-hint>Bytes per second</mat-hint>
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Tx TTL</mat-label>
+        <input matInput formControlName="txTtl">
+        <mat-icon matPrefix>timer</mat-icon>
+        <mat-hint>Seconds</mat-hint>
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Maximum Tx's body size</mat-label>
+        <input matInput formControlName="maxBodySize">
+        <mat-icon matPrefix>format_size</mat-icon>
+        <mat-hint>Bytes</mat-hint>
+    </mat-form-field>
+    <br/>
+
+    <mat-form-field appearance="standard">
+        <mat-label>Time to run</mat-label>
+        <input matInput formControlName="timeToRun">
+        <mat-icon matPrefix>timelapse</mat-icon>
+        <mat-hint>Seconds</mat-hint>
+    </mat-form-field>
+    <br/>
+
+    <button mat-fab color="primary" type="submit">Create</button>
+</form>

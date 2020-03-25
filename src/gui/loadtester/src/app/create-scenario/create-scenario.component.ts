@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-create-scenario',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-scenario.component.css']
 })
 export class CreateScenarioComponent implements OnInit {
-
-  constructor() { }
+  form;
+  
+  constructor(private formBuilder: FormBuilder) { 
+    this.form = this.formBuilder.group({
+      taskforce: '',
+      bps: 0,
+      txTtl: 0,
+      maxBodySize: 0,
+      timeToRun: 0
+    });
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(data) {
+    this.form.reset();
+  }
 }
