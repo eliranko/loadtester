@@ -8,12 +8,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { CreateScenarioComponent } from './create-scenario/create-scenario.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    CreateScenarioComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +25,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
