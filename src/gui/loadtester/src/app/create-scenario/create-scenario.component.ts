@@ -12,10 +12,10 @@ export class CreateScenarioComponent implements OnInit {
   constructor(private formBuilder: FormBuilder) { 
     this.form = this.formBuilder.group({
       taskforce: '',
-      bps: 0,
-      txTtl: 0,
-      maxBodySize: 0,
-      timeToRun: 0
+      bps: '',
+      txTtl: '',
+      maxBodySize: '',
+      timeToRun: ''
     });
   }
 
