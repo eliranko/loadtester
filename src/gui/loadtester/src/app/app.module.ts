@@ -16,13 +16,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { SavedScenariosComponent } from './saved-scenarios/saved-scenarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
-    CreateScenarioComponent
+    CreateScenarioComponent,
+    SavedScenariosComponent
   ],
   imports: [
     BrowserModule,

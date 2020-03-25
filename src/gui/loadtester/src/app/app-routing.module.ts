@@ -1,9 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CreateScenarioComponent } from './create-scenario/create-scenario.component';
+import { SavedScenariosComponent } from './saved-scenarios/saved-scenarios.component';
 
 const routes: Routes = [
-  { path: '', component: CreateScenarioComponent }
+  { path: 'create', component: CreateScenarioComponent },
+  { path: 'saved', component: SavedScenariosComponent },
+  { path: '', redirectTo: '/create', pathMatch: 'full' }
 ];
 
 @NgModule({
