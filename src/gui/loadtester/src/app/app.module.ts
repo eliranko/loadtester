@@ -24,6 +24,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ScenarioPlatsStatsComponent } from './display-scenario/scenario-plats-stats/scenario-plats-stats.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { ScenarioDescriptionComponent } from './saved-scenarios/scenario-description/scenario-description.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatSortModule } from '@angular/material/sort';
     SavedScenariosComponent,
     DisplayScenarioComponent,
     ScenarioCardComponent,
-    ScenarioPlatsStatsComponent
+    ScenarioPlatsStatsComponent,
+    ScenarioDescriptionComponent
   ],
   imports: [
     BrowserModule,

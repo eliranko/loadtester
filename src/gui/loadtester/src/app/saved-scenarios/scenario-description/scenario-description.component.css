@@ -1,0 +1,22 @@
+mat-card {
+    max-width: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.avatar-image {
+    width: 70px;
+    margin: -10px -10px 10px -10px;
+    background-image: url('../../../assets/scenario-avater.png');
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container div:first-child {
+    user-select: none;
+}
