@@ -17,6 +17,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { SavedScenariosComponent } from './saved-scenarios/saved-scenarios.component';
+import { DisplayScenarioComponent } from './display-scenario/display-scenario.component';
+import { MatCardModule } from '@angular/material/card';
+import { ScenarioCardComponent } from './display-scenario/scenario-card/scenario-card.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,9 @@ import { SavedScenariosComponent } from './saved-scenarios/saved-scenarios.compo
     HeaderComponent,
     SidebarComponent,
     CreateScenarioComponent,
-    SavedScenariosComponent
+    SavedScenariosComponent,
+    DisplayScenarioComponent,
+    ScenarioCardComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,9 @@ import { SavedScenariosComponent } from './saved-scenarios/saved-scenarios.compo
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { NewScenario } from '../shared/models/new-scenario.model';
 
 @Component({
   selector: 'app-create-scenario',
@@ -23,6 +24,7 @@ export class CreateScenarioComponent implements OnInit {
   }
 
   onSubmit(data) {
+    let scenario = new NewScenario().deserialize(data);
     this.form.reset();
   }
 }
