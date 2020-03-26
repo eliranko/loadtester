@@ -1,1 +1,5 @@
-<app-scenario-description></app-scenario-description>
+<div class="container">
+    <div *ngFor="let desc of descriptions">
+        <app-scenario-description [description]="desc" (clicked)="clickedDescription(desc)"></app-scenario-description>
+    </div>
+</div>

@@ -1,3 +1,5 @@
+import { Scenario } from './scenario.model';
+
 export class ScenarioDescription {
     id: string;
     taskforce: string;
@@ -5,6 +7,7 @@ export class ScenarioDescription {
     txTtl: number;
     maxBodySize: number;
     timeToRun: number;
+    prevScenarios: Scenario;
 
     deserialize(input: any): ScenarioDescription {
         Object.assign(this, input);

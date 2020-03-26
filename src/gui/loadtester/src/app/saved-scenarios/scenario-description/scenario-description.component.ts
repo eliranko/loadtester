@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ScenarioDescription } from 'src/app/shared/models/scenario-description.model';
 
 @Component({
@@ -7,17 +7,10 @@ import { ScenarioDescription } from 'src/app/shared/models/scenario-description.
   styleUrls: ['./scenario-description.component.css']
 })
 export class ScenarioDescriptionComponent implements OnInit {
-  description: ScenarioDescription;
+  @Input() description: ScenarioDescription;
+  @Output() clicked = new EventEmitter();
 
-  constructor() { 
-    this.description = new ScenarioDescription();
-    this.description.id = "34adf-456gggh-3dfffb";
-    this.description.bps = 500;
-    this.description.maxBodySize = 1300;
-    this.description.taskforce = "HelloWorld";
-    this.description.timeToRun = 60;
-    this.description.txTtl = 5;
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
