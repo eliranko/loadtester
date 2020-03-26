@@ -21,6 +21,9 @@ import { DisplayScenarioComponent } from './display-scenario/display-scenario.co
 import { MatCardModule } from '@angular/material/card';
 import { ScenarioCardComponent } from './display-scenario/scenario-card/scenario-card.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ScenarioPlatsStatsComponent } from './display-scenario/scenario-plats-stats/scenario-plats-stats.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     CreateScenarioComponent,
     SavedScenariosComponent,
     DisplayScenarioComponent,
-    ScenarioCardComponent
+    ScenarioCardComponent,
+    ScenarioPlatsStatsComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatTableModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]

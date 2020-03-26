@@ -7,7 +7,7 @@ import { DisplayScenarioComponent } from './display-scenario/display-scenario.co
 const routes: Routes = [
   { path: 'create', component: CreateScenarioComponent },
   { path: 'saved', component: SavedScenariosComponent },
-  { path: 'display', component: DisplayScenarioComponent },
+  { path: 'running', component: DisplayScenarioComponent },
   { path: '', redirectTo: '/create', pathMatch: 'full' }
 ];
 

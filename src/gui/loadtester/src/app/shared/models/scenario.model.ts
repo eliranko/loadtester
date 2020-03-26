@@ -1,6 +1,8 @@
 export class PlatfromStat {
+    name: string;
     averageRtt: number;
     standardDeviation: number;
+    pendingAcks: number;
 }
 
 export class Scenario {
@@ -8,7 +10,7 @@ export class Scenario {
     sentTx: number;
     txAckedByBroker: number;
     txFullyAcked: number;
-    platformStats: Map<number, PlatfromStat>;
+    platformStats: PlatfromStat[];
 
     deserialize(input: any): Scenario {
         Object.assign(this, input);
