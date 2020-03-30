@@ -7,12 +7,18 @@
     <mat-card-content>
         <mat-list>
             <mat-list-item>
-                # of TX in the scenario: {{scenario.sentTx}}
+                <div class="item-container content">
+                    <p># of TX in the scenario:</p>
+                    <p>{{scenario.sentTx}}</p>
+                </div>
                 <mat-divider></mat-divider>
             </mat-list-item>
             <mat-list-item>
                 <div class="item-container">
-                    <p># of TX acked by broker: {{scenario.txAckedByBroker}}</p>
+                    <div class="content">
+                        <p># of TX acked by broker:</p>
+                        <p>{{scenario.txAckedByBroker}}</p>
+                    </div>
                     <mat-progress-bar *ngIf="type == 'running'" mode="buffer" [value]="brokerAckProgress" bufferValue="0"></mat-progress-bar>
                     <mat-progress-bar *ngIf="type != 'running'" mode="determinate" [value]="brokerAckProgress"></mat-progress-bar>
                 </div>
@@ -20,7 +26,10 @@
             </mat-list-item>
             <mat-list-item>
                 <div class="item-container">
-                    <p># of TX fully acked by platforms: {{scenario.txFullyAcked}}</p>
+                    <div class="content">
+                        <p># of TX fully acked by platforms:</p>
+                        <p>{{scenario.txFullyAcked}}</p>
+                    </div>
                     <mat-progress-bar *ngIf="type == 'running'" mode="buffer" [value]="platformsAckProgress" bufferValue="0"></mat-progress-bar>
                     <mat-progress-bar *ngIf="type != 'running'" mode="determinate" [value]="platformsAckProgress"></mat-progress-bar>
                 </div>

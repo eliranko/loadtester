@@ -11,7 +11,11 @@ mat-card {
     background-size: cover;
 }
 
-.item-container mat-progress-bar {
-    width: 200px;
-    box-sizing: border-box;
+.item-container {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
 }
