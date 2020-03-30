@@ -1,8 +1,8 @@
 mat-card {
     box-sizing: border-box;
     width: 100%;
-    margin-left: 10px;
-    margin-top: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 .avatar-image {
@@ -14,4 +14,5 @@ mat-card {
 
 .item-container mat-progress-bar {
     width: 200px;
+    box-sizing: border-box;
 }

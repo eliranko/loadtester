@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ScenarioDescription } from 'src/app/shared/models/scenario-description.model';
 
 @Component({
@@ -7,10 +8,9 @@ import { ScenarioDescription } from 'src/app/shared/models/scenario-description.
   styleUrls: ['./scenario-description.component.css']
 })
 export class ScenarioDescriptionComponent implements OnInit {
-  @Input() description: ScenarioDescription;
-  @Output() clicked = new EventEmitter();
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<ScenarioDescriptionComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: ScenarioDescription) { }
 
   ngOnInit(): void {
   }

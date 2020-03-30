@@ -1,23 +1,19 @@
-mat-card {
-    min-width: 300px;
-    margin-left: 10px;
-    margin-top: 10px;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scenario {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid white;
+}
+
+.content-title {
+    text-align: center;
     user-select: none;
 }
 
-.avatar-image {
-    width: 70px;
-    margin: -10px -10px 10px -10px;
-    background-image: url('../../../assets/scenario-avater.png');
-    background-size: cover;
-}
-
-.container {
+mat-dialog-actions button {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.clickable {
-    cursor: pointer;
 }

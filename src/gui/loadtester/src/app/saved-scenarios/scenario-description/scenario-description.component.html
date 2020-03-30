@@ -1,44 +1,12 @@
-<mat-card (click)="clicked.emit()" class="clickable">
-    <mat-card-header>
-        <div mat-card-avatar class="avatar-image"></div>
-        <mat-card-title>{{description.id}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <mat-list>
-            <mat-list-item>
-                <div class="container">
-                    <div>Task foce:</div>
-                    <div>{{description.taskforce}}</div>
-                </div>
-                <mat-divider></mat-divider>
-            </mat-list-item>
-            <mat-list-item>
-                <div class="container">
-                    <div>Rate:</div>
-                    <div>{{description.bps}} bps</div>
-                </div>
-                <mat-divider></mat-divider>
-            </mat-list-item>
-            <mat-list-item>
-                <div class="container">
-                    <div>Maximum Tx body size:</div>
-                    <div>{{description.maxBodySize}} bytes</div>
-                </div>
-                <mat-divider></mat-divider>
-            </mat-list-item>
-            <mat-list-item>
-                <div class="container">
-                    <div>Tx TTL:</div>
-                    <div>{{description.txTtl}}s</div>
-                </div>
-                <mat-divider></mat-divider>
-            </mat-list-item>
-            <mat-list-item>
-                <div class="container">
-                    <div>Scenario run time:</div>
-                    <div>{{description.timeToRun}}s</div>
-                </div>
-            </mat-list-item>
-        </mat-list>
-    </mat-card-content>
-</mat-card>
+<h2 mat-dialog-title>Scenario Description {{data.id}}</h2>
+<mat-dialog-content>
+    <h2 class="content-title">Previous scenarios</h2>
+    <div class="container">
+        <div *ngFor="let scenario of data.prevScenarios" class="scenario">
+            <app-display-scenario></app-display-scenario>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true">Run</button>
+</mat-dialog-actions>
