@@ -28,6 +28,7 @@ import { ScenarioDescriptionPreviewComponent } from './saved-scenarios/scenario-
 import { ScenarioDescriptionComponent } from './saved-scenarios/scenario-description/scenario-description.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RunningScenarioComponent } from './running-scenario/running-scenario.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { RunningScenarioComponent } from './running-scenario/running-scenario.co
     MatProgressBarModule,
     MatTableModule,
     MatSortModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
   entryComponents: [
     ScenarioDescriptionComponent

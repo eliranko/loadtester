@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Scenario } from 'src/app/shared/models/scenario.model';
 
 @Component({
@@ -6,7 +6,7 @@ import { Scenario } from 'src/app/shared/models/scenario.model';
   templateUrl: './scenario-card.component.html',
   styleUrls: ['./scenario-card.component.css']
 })
-export class ScenarioCardComponent implements OnInit {
+export class ScenarioCardComponent implements OnInit, OnChanges {
   @Input() scenario: Scenario;
   @Input() type: string;
   brokerAckProgress: number;
@@ -15,6 +15,11 @@ export class ScenarioCardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    this.calcProgress();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.scenario = changes.scenario.currentValue;
     this.calcProgress();
   }
 
