@@ -27,6 +27,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ScenarioDescriptionPreviewComponent } from './saved-scenarios/scenario-description-preview/scenario-description-preview.component';
 import { ScenarioDescriptionComponent } from './saved-scenarios/scenario-description/scenario-description.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { RunningScenarioComponent } from './running-scenario/running-scenario.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     ScenarioCardComponent,
     ScenarioPlatsStatsComponent,
     ScenarioDescriptionPreviewComponent,
-    ScenarioDescriptionComponent
+    ScenarioDescriptionComponent,
+    RunningScenarioComponent
   ],
   imports: [
     BrowserModule,

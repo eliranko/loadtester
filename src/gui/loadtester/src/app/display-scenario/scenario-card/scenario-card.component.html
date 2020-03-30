@@ -2,6 +2,7 @@
     <mat-card-header>
         <div mat-card-avatar class="avatar-image"></div>
         <mat-card-title>Scenario details</mat-card-title>
+        <mat-card-subtitle>Started at {{scenario.startedAt | date: 'short'}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         <mat-list>
@@ -12,14 +13,16 @@
             <mat-list-item>
                 <div class="item-container">
                     <p># of TX acked by broker: {{scenario.txAckedByBroker}}</p>
-                    <mat-progress-bar mode="buffer" [value]="brokerAckProgress" bufferValue="0" color="warm"></mat-progress-bar>
+                    <mat-progress-bar *ngIf="type == 'running'" mode="buffer" [value]="brokerAckProgress" bufferValue="0"></mat-progress-bar>
+                    <mat-progress-bar *ngIf="type != 'running'" mode="determinate" [value]="brokerAckProgress"></mat-progress-bar>
                 </div>
                 <mat-divider></mat-divider>
             </mat-list-item>
             <mat-list-item>
                 <div class="item-container">
                     <p># of TX fully acked by platforms: {{scenario.txFullyAcked}}</p>
-                    <mat-progress-bar mode="buffer" [value]="platformsAckProgress" bufferValue="0" color="warm"></mat-progress-bar>
+                    <mat-progress-bar *ngIf="type == 'running'" mode="buffer" [value]="platformsAckProgress" bufferValue="0"></mat-progress-bar>
+                    <mat-progress-bar *ngIf="type != 'running'" mode="determinate" [value]="platformsAckProgress"></mat-progress-bar>
                 </div>
                 <mat-divider></mat-divider>
             </mat-list-item>

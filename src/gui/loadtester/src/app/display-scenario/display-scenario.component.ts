@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Scenario } from '../shared/models/scenario.model';
 
 @Component({
   selector: 'app-display-scenario',
@@ -6,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./display-scenario.component.css']
 })
 export class DisplayScenarioComponent implements OnInit {
-  // scenario:
+  @Input() scenario: Scenario;
+  @Input() type: string;
+  
   constructor() { }
 
   ngOnInit(): void {

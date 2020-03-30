@@ -44,6 +44,7 @@ export class SavedScenariosComponent implements OnInit {
 
   getScenarios(): Scenario[] {
     let scenario = new Scenario();
+    scenario.startedAt = Date.now();
     scenario.sentTx = 100;
     scenario.txAckedByBroker = 80;
     scenario.txFullyAcked = 50;
@@ -61,7 +62,8 @@ export class SavedScenariosComponent implements OnInit {
     scenario.platformStats.push(platStats1);
 
     let scenario2 = new Scenario();
-    scenario2.sentTx = 10;
+    scenario2.startedAt = Date.now() - 5000000;
+    scenario2.sentTx = 105;
     scenario2.txAckedByBroker = 53;
     scenario2.txFullyAcked = 22;
     scenario2.platformStats = [platStats, platStats1];

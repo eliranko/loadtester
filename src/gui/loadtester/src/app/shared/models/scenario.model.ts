@@ -7,6 +7,7 @@ export class PlatfromStat {
 
 export class Scenario {
     id: string;
+    startedAt: number;
     sentTx: number;
     txAckedByBroker: number;
     txFullyAcked: number;

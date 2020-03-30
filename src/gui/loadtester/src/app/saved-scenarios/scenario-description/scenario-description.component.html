@@ -3,7 +3,7 @@
     <h2 class="content-title">Previous scenarios</h2>
     <div class="container">
         <div *ngFor="let scenario of data.prevScenarios" class="scenario">
-            <app-display-scenario></app-display-scenario>
+            <app-display-scenario [scenario]="scenario"></app-display-scenario>
         </div>
     </div>
 </mat-dialog-content>
